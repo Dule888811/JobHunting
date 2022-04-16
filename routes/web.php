@@ -22,7 +22,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::post('/app/', [App\Http\Controllers\ApplicationsController::class, 'create'])->name('store');
+Route::post('', [App\Http\Controllers\ApplicationsController::class, 'create'])->name('store');
 Route::prefix('admin')->middleware('admin')->name('admin.')->group(function () {
     Route::get('main', [MainController::class, 'index'])->name('main');
     Route::get('approve/{id}', [ManageApplicationsController::class, 'approve'])->name('approve');
