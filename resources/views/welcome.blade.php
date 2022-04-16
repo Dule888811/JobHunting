@@ -5,15 +5,15 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <h4 class="text-center">{{$massage}}</h4>
-
-                @if(isset($app))
+                @if(isset($massage)) <h4 class="text-center">{{$massage}}</h4>@endif
+               
+                @if(isset($app['first_name']))
                     <div class="row mb-3">
 
                         <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('First name') }}</label>
 
                         <div class="col-md-6">
-                            <input id="first_name" type="text" class="form-control"   name='first_name'  value="{{ $app['first_name'] }}"  readonly autocomplete="first_name" autofocus>
+                            <input id="first_name" type="text" class="form-control"   name='first_name'  value="{{$app['first_name']}}"  readonly autocomplete="first_name" autofocus>
 
 
                         </div>
@@ -63,17 +63,17 @@
 
                         </div>
                     </div>
-                    @else
+
 
                     <div class="row mb-3">
                         <label for="job" class="col-md-4 col-form-label text-md-end"> {{ __('Job') }}</label>
 
                         <div class="col-md-6">
-                            <input type="text" value="{{ $application->job }}" id="job"  name="job" readonly class="form-control">
+                            <input type="text" value="{{ $app['job'] }}" id="job"  name="job" readonly class="form-control">
 
                         </div>
                     </div>
-
+                    @else
                 <div id="job-application" class="card-header">{{ __('Job application') }}</div>
                 @if($errors)
 

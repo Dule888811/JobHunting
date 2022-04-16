@@ -38,7 +38,7 @@ class ApplicationsController extends Controller
         {
             if($application->job == $request->job && $application->email == $request->email)
             {
-              //  return view('application')->with('application', $application);
+
                 $app = [
                     'first_name' => $application->first_name,
                     'last_name' => $application->last_name ,
