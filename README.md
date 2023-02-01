@@ -44,5 +44,3 @@ Add APPROVE, DENY and DELETE buttons (use any type of confirmation on these butt
 *Use current admin sections menu
 
 Also, here is the database you should import. 
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
